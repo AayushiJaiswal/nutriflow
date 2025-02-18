@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-register</title>
+    <link rel="stylesheet" href="login-register.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>NutriFlow</h1>
+    
+        <!-- Register Form -->
+        <div class="form-container" id="register-form">
+          <h2>Register</h2>
+          <form id="registerForm">
+            <div class="input-group">
+              <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-group">
+              <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Register</button>
+          </form>
+          <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+        </div>
+    
+        <!-- Login Form -->
+        <div class="form-container" id="login-form" style="display: none;">
+          <h2>Login</h2>
+          <form id="loginForm">
+            <div class="input-group">
+              <input type="email" id="loginEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+              <input type="password" id="loginPassword" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register here</a></p>
+        </div>
+      </div>
+      <script src="login-register.js"></script>
+     
+    </body>
+</html>

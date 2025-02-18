@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplements</title>
+    <link rel="stylesheet" href="energy.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="navbar">
+    <div class="container">
+        
+        <!-- Left: Logo & Brand Name -->
+        <div class="logo">
+            <img src="logo.jpg" alt="NutriFlow Logo" class="logo-img">  <!-- Replace with actual logo -->
+            <span class="brand-name">NutriFlow</span>
+        </div>
+
+        <!-- Center: Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#" id="supplements-link">Supplements</a></li>
+             <li><a href="#" id="protein-link">Protein Powders</a></li>
+            <li><a href="#" id="energy-link">Energy boosters</a></li>
+            <li><a href="#" id="Snacks-link">Healthy Snacks</a></li>
+            <li><a href="#" id="vegan-link">Vegan Options</a></li>
+        </ul>
+
+        <!-- Right: User & Cart Icons -->
+        <div class="icons">
+            <a href="#"><img src="user.jpg" alt="User"></a> 
+            <a href="#"><img src="cart.jpg" alt="Cart"></a>
+        </div>
+        
+    </div>
+ </nav>
+
+
+  <!-- energyboosters Section -->
+  <section id="energy-section" class="section">
+    <h2>Energy Boosters</h2>
+    <!-- Seasonal Savings Banner -->
+<div class="seasonal-banner">
+    <p>Seasonal savings are here! Shop our bestsellers before they are gone.</p>
+</div>
+
+
+    <!-- Filters -->
+    <div class="filters">
+        <div>
+            <label for="price">Price Range: ₹<span id="price-value">5000</span></label>
+            <input type="range" id="price" min="0" max="10000" value="5000">
+        </div>
+
+        <div>
+            <label for="stock">Stock:</label>
+            <select id="stock">
+                <option value="all">All</option>
+                <option value="in-stock">In Stock</option>
+                <option value="out-of-stock">Out of Stock</option>
+                <option value="backorder">On Backorder</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="collection">Collection:</label>
+            <select id="collection">
+                <option value="all">All</option>
+                <option value="vegan">Vegan Option</option>
+                <option value="pre-workout">Pre Workout</option>
+                <option value="energy">Energy Boosters</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="product-grid">
+        <div class="product">
+            <span class="sale-label">Sale!</span>
+            <img src="multivitamin.jpg" alt="Multivitamin">
+            <p>Multivitamin Complex</p>
+            <p class="price">₹1,500</p>
+            <a href="#" class="add-to-cart" data-name="Multivitamin Complex" data-price="1500">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <span class="sale-label">Sale!</span>
+            <img src="probiotic.jpg" alt="Probiotic">
+            <p>Probiotic Blend</p>
+            <p class="price">₹2,500</p>
+            <a href="#" class="add-to-cart" data-name="Probiotic Blend" data-price="2500">Add to Cart</a>
+        </div>
+
+        <div class="product" data-price="3500">
+            <img src="whey-protein.jpg" alt="Protein">
+            <p>Whey Protein</p>
+            <p class="price">₹3,500</p>
+            <a href="#" class="add-to-cart" data-name="Whey Protein" data-price="3500">Add to Cart</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Vegan Options</a></li>
+                    <li><a href="#">Energy Boosters</a></li>
+                    <li><a href="#">Pre-Workout</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Supplements</a></li>
+                    <li><a href="#">Protein Powders</a></li>
+                    <li><a href="#">Healthy Snacks</a></li>
+                    <li><a href="#">Herbal Supplements</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Shop All</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="footer-column newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest health tips and exclusive offers.</p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2025 NutriFlow. All rights reserved.</p>
+            <div class="footer-links-bottom">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Refund and Return Policy</a>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="energy.js"></script>
+</body>
+</html>

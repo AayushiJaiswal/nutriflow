@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - NutriFlow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Your Cart</h1>
+        <a href="Nutriflow.html">🏠 Home</a>
+    </header>
+
+    <section id="cart-items"></section>
+    <h3>Total: ₹<span id="total-price">0</span></h3>
+    <a href="checkout.html" class="button">Proceed to Checkout</a>
+
+    <script src="cart.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartContainer = document.getElementById("cart-items");
+        let totalPrice = 0;
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            cart.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `${item.name} x ${item.quantity} - ₹${item.price * item.quantity}`;
+                cartContainer.appendChild(div);
+                totalPrice += item.price * item.quantity;
+            });
+            document.getElementById("total-price").textContent = totalPrice;
+        }
+    </script>
+
+</body>
+</html>

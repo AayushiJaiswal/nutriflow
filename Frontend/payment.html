@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - NutriFlow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Select Payment Method</h1>
+        <a href="checkout.html">🔙 Back to Checkout</a>
+    </header>
+
+    <button onclick="processPayment('COD')">Cash on Delivery</button>
+    <button onclick="processPayment('Paytm')">Paytm</button>
+    <button onclick="processPayment('Card')">Credit/Debit Card</button>
+
+    <script>
+        function processPayment(method) {
+            alert("Payment successful via " + method);
+            localStorage.removeItem("cart"); // Clear cart after order
+            window.location.href = "confirmation.html";
+        }
+    </script>
+
+</body>
+</html>
