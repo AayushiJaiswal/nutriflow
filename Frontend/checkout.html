@@ -5,35 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - NutriFlow</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="checkout.js"></script> <!-- Your script file -->
+
 </head>
 <body>
 
-    <header>
-        <h1>Checkout</h1>
-        <a href="cart.html">🛒 Back to Cart</a>
-    </header>
+    <button id="payButton">Pay Now</button>
 
-    <form id="checkout-form">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="text" id="address" placeholder="Address" required>
-        <input type="text" id="city" placeholder="City" required>
-        <input type="text" id="pincode" placeholder="Pincode" required>
-        <button type="submit">Proceed to Payment</button>
-    </form>
-
-    <script>
-        document.getElementById("checkout-form").addEventListener("submit", (e) => {
-            e.preventDefault();
-            let orderDetails = {
-                name: document.getElementById("name").value,
-                address: document.getElementById("address").value,
-                city: document.getElementById("city").value,
-                pincode: document.getElementById("pincode").value,
-            };
-            localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
-            window.location.href = "payment.html";
-        });
-    </script>
 
 </body>
 </html>
